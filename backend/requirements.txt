@@ -1,0 +1,11 @@
+google-generativeai
+opencv-python
+fer
+faiss-cpu
+sentence-transformers
+python-dotenv
+numpy
+tensorflow
+flask
+flask-cors
+flask-jwt-extended

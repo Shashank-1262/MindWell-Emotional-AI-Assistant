@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWell - Emotional Wellness Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loader" class="loader hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Authentication Screen -->
+    <div id="auth-screen" class="screen active">
+        <div class="auth-container">
+            <div class="logo">
+                <h1>🧠 MindWell</h1>
+                <p class="tagline">Your Emotional Wellness Companion</p>
+            </div>
+            
+            <div class="auth-box">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Register</button>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div id="login-error" class="error-message"></div>
+                </form>
+                
+                <!-- Register Form -->
+                <form id="register-form" class="auth-form">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" placeholder="Choose a password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    <div id="register-error" class="error-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App Screen -->
+    <div id="app-screen" class="screen">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🧠 MindWell</h1>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-link active" data-view="dashboard">Dashboard</button>
+                <button class="nav-link" data-view="log-day">Log My Day</button>
+                <button class="nav-link" data-view="history-qa">Ask My History</button>
+                <button class="nav-link" data-view="insights">Insights</button>
+            </div>
+            <div class="nav-user">
+                <span id="user-display">User</span>
+                <button id="logout-btn" class="btn btn-secondary btn-sm">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Dashboard View -->
+        <div id="dashboard-view" class="view active">
+            <div class="container">
+                <h1 class="page-title">Dashboard</h1>
+                
+                <div id="no-data-message" class="info-card">
+                    <p>👋 Welcome! Start by logging your day to see your emotional insights.</p>
+                </div>
+                
+                <div id="dashboard-content" class="hidden">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">😊</div>
+                            <div class="stat-label">Current Emotion</div>
+                            <div class="stat-value" id="stat-emotion">-</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-label">Stress Level</div>
+                            <div class="stat-value" id="stat-stress">-</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">📈</div>
+                            <div class="stat-label">Recent Average</div>
+                            <div class="stat-value" id="stat-avg-stress">-</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">📝</div>
+                            <div class="stat-label">Total Logs</div>
+                            <div class="stat-value" id="stat-total">-</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Latest Entry</h3>
+                        <p id="latest-timestamp">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Log My Day View -->
+        <div id="log-day-view" class="view">
+            <div class="container">
+                <h1 class="page-title">Log My Day</h1>
+                
+                <div class="log-section">
+                    <form id="log-form">
+                        <div class="form-group">
+                            <label for="day-text">How was your day? Describe freely:</label>
+                            <textarea 
+                                id="day-text" 
+                                rows="6" 
+                                placeholder="Share your thoughts, feelings, and experiences from today..."
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Webcam Face Detection -->
+                        <div class="webcam-section">
+                            <h3>📸 Facial Expression Analysis (Optional)</h3>
+                            <p class="help-text">Capture your facial expression for more accurate emotion analysis.</p>
+                            
+                            <div class="webcam-controls">
+                                <button type="button" id="start-webcam-btn" class="btn btn-secondary">
+                                    Start Webcam
+                                </button>
+                                <button type="button" id="capture-face-btn" class="btn btn-secondary" disabled>
+                                    Capture Expression
+                                </button>
+                                <button type="button" id="stop-webcam-btn" class="btn btn-secondary" disabled>
+                                    Stop Webcam
+                                </button>
+                            </div>
+                            
+                            <div class="webcam-container" id="webcam-container">
+                                <video id="webcam-video" autoplay playsinline></video>
+                                <canvas id="webcam-canvas" style="display: none;"></canvas>
+                                <div id="face-preview" class="face-preview hidden">
+                                    <p>✓ Face captured! This will be analyzed with your text.</p>
+                                    <img id="captured-face" alt="Captured face">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit & Analyze</button>
+                    </form>
+                </div>
+                
+                <!-- Emotion Results -->
+                <div id="emotion-results" class="results-section hidden">
+                    <h2>Analysis Results</h2>
+                    <div class="emotion-card">
+                        <div class="emotion-header">
+                            <div class="emotion-main">
+                                <span class="emotion-icon" id="result-emotion-icon">😊</span>
+                                <div>
+                                    <div class="emotion-label">Detected Emotion</div>
+                                    <div class="emotion-value" id="result-emotion">-</div>
+                                </div>
+                            </div>
+                            <div class="stress-badge" id="result-stress-badge">
+                                Stress: <span id="result-stress">-</span>/10
+                            </div>
+                        </div>
+                        <div class="emotion-summary" id="result-summary">-</div>
+                        <div class="emotion-triggers" id="result-triggers"></div>
+                    </div>
+                </div>
+                
+                <!-- Therapist Chat -->
+                <div id="chat-section" class="chat-section hidden">
+                    <h2>💬 AI Therapist Session</h2>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Messages will be added here -->
+                        </div>
+                        <div class="chat-input-container">
+                            <input 
+                                type="text" 
+                                id="chat-input" 
+                                placeholder="Type your message... (or 'exit' to end)"
+                                autocomplete="off"
+                            >
+                            <button id="chat-send-btn" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ask My History View -->
+        <div id="history-qa-view" class="view">
+            <div class="container">
+                <h1 class="page-title">Ask My History</h1>
+                
+                <div class="qa-section">
+                    <p class="help-text">
+                        Ask questions about your emotional history. Examples: 
+                        "What were my biggest stressors last week?", 
+                        "Show me all my happy moments", 
+                        "What patterns do you see in my logs?"
+                    </p>
+                    
+                    <form id="qa-form">
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="qa-question" 
+                                placeholder="Ask a question about your emotional history..."
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ask</button>
+                    </form>
+                    
+                    <div id="qa-results" class="results-section hidden">
+                        <h3>Answer:</h3>
+                        <div class="answer-card" id="qa-answer">
+                            <!-- Answer will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insights View -->
+        <div id="insights-view" class="view">
+            <div class="container">
+                <h1 class="page-title">Emotional Insights</h1>
+                
+                <div id="insights-loading" class="info-card">
+                    <p>Loading insights...</p>
+                </div>
+                
+                <div id="insights-content" class="hidden">
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <h3>📊 Overview</h3>
+                            <div class="insight-stat">
+                                <span class="insight-label">Total Logs:</span>
+                                <span class="insight-value" id="insight-total">-</span>
+                            </div>
+                            <div class="insight-stat">
+                                <span class="insight-label">Average Stress:</span>
+                                <span class="insight-value" id="insight-avg-stress">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-card">
+                            <h3>😊 Emotional Profile</h3>
+                            <div class="insight-stat">
+                                <span class="insight-label">Dominant Emotion:</span>
+                                <span class="insight-value" id="insight-emotion">-</span>
+                            </div>
+                            <div class="insight-stat">
+                                <span class="insight-label">Trend:</span>
+                                <span class="insight-value" id="insight-trend">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-card">
+                            <h3>⚠️ Triggers</h3>
+                            <div class="insight-stat">
+                                <span class="insight-label">Common Trigger:</span>
+                                <span class="insight-value" id="insight-trigger">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Detailed Analysis</h3>
+                        <pre id="insights-text" class="insights-text">-</pre>
+                    </div>
+                    
+                    <div id="recent-logs-section" class="recent-logs-section">
+                        <h3>Recent Logs</h3>
+                        <div id="recent-logs" class="recent-logs">
+                            <!-- Recent logs will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

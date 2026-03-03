@@ -1,0 +1,216 @@
+[
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "praised by my teacher"
+        ],
+        "summary": "The individual is feeling very happy and positive due to receiving praise from their teacher.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6512432432432432,
+            "sad": 0.09037837837837838,
+            "angry": 0.04064864864864865,
+            "surprised": 0.0,
+            "neutral": 0.16951351351351351,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i was very happy today because i got praised by my teacher",
+        "timestamp": "2026-02-27 14:15:06"
+    },
+    {
+        "final_emotion": "fearful",
+        "stress_level": 9,
+        "sentiment_score": -0.9,
+        "triggers": [
+            "unspecified event/situation"
+        ],
+        "summary": "The text expresses a very high level of stress, leading to a strong negative emotional state that likely includes anxiety or fear, originating from an unmentioned event or situation.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.056875,
+            "sad": 0.0845625,
+            "angry": 0.023625000000000004,
+            "surprised": 0.0,
+            "neutral": 0.20437500000000003,
+            "fearful": 0.6,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very stressful",
+        "timestamp": "2026-02-27 15:00:11"
+    },
+    {
+        "final_emotion": "neutral",
+        "face_emotion": "happy",
+        "stress_level": 5,
+        "sentiment_score": 0.0,
+        "triggers": [],
+        "summary": "Error in analysis.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.30464864864864866,
+            "sad": 0.002162162162162162,
+            "angry": 0.0018378378378378379,
+            "surprised": 0.0,
+            "neutral": 0.6884324324324325,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very bad ",
+        "timestamp": "2026-02-27 15:17:36"
+    },
+    {
+        "final_emotion": "neutral",
+        "face_emotion": "happy",
+        "stress_level": 5,
+        "sentiment_score": 0.0,
+        "triggers": [],
+        "summary": "AI Analysis is currently offline. Log saved with default values.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.32147368421052636,
+            "sad": 0.000736842105263158,
+            "angry": 0.002105263157894737,
+            "surprised": 0.0,
+            "neutral": 0.6716842105263158,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very bad",
+        "timestamp": "2026-02-27 15:23:14"
+    },
+    {
+        "final_emotion": "happy",
+        "face_emotion": "neutral",
+        "stress_level": 0,
+        "sentiment_score": 0.95,
+        "triggers": [
+            "positive evaluation"
+        ],
+        "summary": "The text expresses a clear and strong positive emotion, indicating happiness or satisfaction with something described as 'very good'.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6953684210526315,
+            "sad": 0.00031578947368421053,
+            "angry": 0.004315789473684211,
+            "surprised": 0.0,
+            "neutral": 0.2985263157894737,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was vey good",
+        "timestamp": "2026-03-01 11:38:09"
+    },
+    {
+        "final_emotion": "happy",
+        "face_emotion": "neutral",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "very good"
+        ],
+        "summary": "The text expresses a strong positive sentiment and satisfaction.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.608,
+            "sad": 0.008,
+            "angry": 0.012,
+            "surprised": 0.0,
+            "neutral": 0.36400000000000005,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very good",
+        "timestamp": "2026-03-03 11:41:34"
+    },
+    {
+        "final_emotion": "sad",
+        "face_emotion": "neutral",
+        "stress_level": 7,
+        "sentiment_score": -0.9,
+        "triggers": [
+            "i am very sad"
+        ],
+        "summary": "The text directly expresses a strong feeling of sadness.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.008,
+            "sad": 0.648,
+            "angry": 0.024,
+            "surprised": 0.0,
+            "neutral": 0.272,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i am very sad",
+        "timestamp": "2026-03-03 11:42:57"
+    },
+    {
+        "final_emotion": "happy",
+        "face_emotion": "neutral",
+        "stress_level": 1,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "very happy"
+        ],
+        "summary": "The individual is experiencing a strong positive emotion of happiness, explicitly stated and clearly evident.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.608,
+            "sad": 0.10800000000000001,
+            "angry": 0.032,
+            "surprised": 0.0,
+            "neutral": 0.196,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i am very happy",
+        "timestamp": "2026-03-03 11:48:37"
+    },
+    {
+        "final_emotion": "happy",
+        "face_emotion": "neutral",
+        "stress_level": 4,
+        "sentiment_score": 0.3,
+        "triggers": [
+            "unspecified events"
+        ],
+        "summary": "The person experienced a complex mix of strong happiness and sadness in the afternoon, with happiness slightly more emphasized due to the intensifier 'very'.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.608,
+            "sad": 0.012,
+            "angry": 0.012,
+            "surprised": 0.0,
+            "neutral": 0.36000000000000004,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i was very happy but also sad in the afternoon",
+        "timestamp": "2026-03-03 19:07:42"
+    },
+    {
+        "final_emotion": "sad",
+        "face_emotion": "neutral",
+        "stress_level": 7,
+        "sentiment_score": -0.9,
+        "triggers": [
+            "the described situation"
+        ],
+        "summary": "The text directly expresses a strong feeling of sadness.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.004,
+            "sad": 0.652,
+            "angry": 0.064,
+            "surprised": 0.0,
+            "neutral": 0.22000000000000003,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very sad",
+        "timestamp": "2026-03-03 19:08:52"
+    }
+]

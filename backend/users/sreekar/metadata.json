@@ -1,0 +1,95 @@
+[
+    {
+        "final_emotion": "neutral",
+        "stress_level": 6,
+        "sentiment_score": -0.5,
+        "triggers": [
+            "feeling tired"
+        ],
+        "summary": "The speaker is stating a physical/mental state of fatigue, which implies low energy and a generally subdued, non-positive condition.",
+        "face_detected": false,
+        "user_text": "hello i am feeling tired",
+        "timestamp": "2026-03-01 21:18:34"
+    },
+    {
+        "final_emotion": "sad",
+        "face_emotion": "happy",
+        "stress_level": 8,
+        "sentiment_score": -0.95,
+        "triggers": [
+            "explicit statement of sadness"
+        ],
+        "summary": "The text explicitly states a very high level of sadness, indicating significant emotional distress.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.38,
+            "sad": 0.6,
+            "angry": 0.0,
+            "surprised": 0.0,
+            "neutral": 0.016,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "very sad",
+        "timestamp": "2026-03-01 22:33:19"
+    },
+    {
+        "final_emotion": "neutral",
+        "stress_level": 7,
+        "sentiment_score": -0.4,
+        "triggers": [
+            "inability to identify feelings",
+            "uncertainty about emotional state"
+        ],
+        "summary": "The person is experiencing a state of confusion and uncertainty about their own emotions, leading to moderate stress and a generally negative sentiment due to the internal struggle.",
+        "face_detected": false,
+        "user_text": "i don't how i am feeling",
+        "timestamp": "2026-03-01 22:38:03"
+    },
+    {
+        "final_emotion": "neutral",
+        "face_emotion": "fear",
+        "stress_level": 4,
+        "sentiment_score": 0.0,
+        "triggers": [
+            "inability to identify emotions",
+            "emotional uncertainty"
+        ],
+        "summary": "The speaker expresses a state of emotional ambiguity, being unable to identify or articulate their current feelings, which indicates a mild level of internal confusion or introspection.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.028000000000000004,
+            "sad": 0.148,
+            "angry": 0.012,
+            "surprised": 0.0,
+            "neutral": 0.6639999999999999,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i don't know how i am feeling",
+        "timestamp": "2026-03-01 22:39:53"
+    },
+    {
+        "final_emotion": "neutral",
+        "face_emotion": "happy",
+        "stress_level": 3,
+        "sentiment_score": 0.0,
+        "triggers": [
+            "introspection",
+            "self-inquiry"
+        ],
+        "summary": "The speaker is in a state of self-reflection, actively questioning and attempting to identify their current emotional state, suggesting a lack of immediate clarity rather than a specific emotion.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.27599999999999997,
+            "sad": 0.0,
+            "angry": 0.012,
+            "surprised": 0.0,
+            "neutral": 0.6839999999999999,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "how do i feel?",
+        "timestamp": "2026-03-01 22:41:07"
+    }
+]

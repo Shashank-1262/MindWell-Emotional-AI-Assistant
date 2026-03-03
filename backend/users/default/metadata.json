@@ -1,0 +1,149 @@
+[
+    {
+        "final_emotion": "neutral",
+        "stress_level": 5,
+        "sentiment_score": 0.0,
+        "triggers": [],
+        "summary": "Error in analysis.",
+        "face_detected": false,
+        "user_text": "it was good",
+        "timestamp": "2026-02-27 13:13:34"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "good"
+        ],
+        "summary": "The text expresses a simple and clear positive sentiment, indicating satisfaction or approval without any apparent stress.",
+        "face_detected": false,
+        "user_text": "it was good",
+        "timestamp": "2026-02-27 13:15:47"
+    },
+    {
+        "final_emotion": "sad",
+        "stress_level": 7,
+        "sentiment_score": -0.9,
+        "triggers": [
+            "the described event/situation"
+        ],
+        "summary": "The text explicitly states a strong feeling of sadness concerning an unspecified event or situation.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.002618181818181818,
+            "sad": 0.6328727272727273,
+            "angry": 0.02349090909090909,
+            "surprised": 0.0,
+            "neutral": 0.3225454545454546,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very sad",
+        "timestamp": "2026-02-27 13:20:47"
+    },
+    {
+        "final_emotion": "angry",
+        "stress_level": 8,
+        "sentiment_score": -0.85,
+        "triggers": [],
+        "summary": "The speaker is expressing a high level of frustration, indicating a significantly negative emotional state and elevated stress.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.0006500000000000001,
+            "sad": 0.026300000000000004,
+            "angry": 0.76445,
+            "surprised": 0.0,
+            "neutral": 0.10865000000000001,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i am very frustated",
+        "timestamp": "2026-02-27 13:21:38"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "good day"
+        ],
+        "summary": "The text conveys a simple yet strong positive emotional state, indicating satisfaction and contentment with the day.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6667012987012987,
+            "sad": 0.013766233766233767,
+            "angry": 0.005974025974025974,
+            "surprised": 0.0,
+            "neutral": 0.30748051948051947,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was a good day",
+        "timestamp": "2026-02-27 13:24:53"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 1.0,
+        "triggers": [
+            "happy"
+        ],
+        "summary": "The text explicitly states a very strong positive emotion of happiness, indicating an excellent emotional state with no stress.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.7186060606060606,
+            "sad": 0.048424242424242425,
+            "angry": 0.022000000000000002,
+            "surprised": 0.0,
+            "neutral": 0.1786060606060606,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was very happy",
+        "timestamp": "2026-02-27 13:26:55"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "wonderful time",
+            "friends"
+        ],
+        "summary": "The text conveys a strong sense of happiness and contentment resulting from a very positive social experience.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6253793103448275,
+            "sad": 0.04910344827586208,
+            "angry": 0.013655172413793104,
+            "surprised": 0.0,
+            "neutral": 0.2980689655172414,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it had a wonderful time with friends ",
+        "timestamp": "2026-02-27 13:30:36"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 1.0,
+        "triggers": [
+            "explicit statement of happiness"
+        ],
+        "summary": "The text directly conveys a strong and clear feeling of happiness, indicating a very positive emotional state with no discernible stress.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.606,
+            "sad": 0.10900000000000001,
+            "angry": 0.046,
+            "surprised": 0.0,
+            "neutral": 0.192,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i am happy",
+        "timestamp": "2026-02-27 14:08:16"
+    }
+]

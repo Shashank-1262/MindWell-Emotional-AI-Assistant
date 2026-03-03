@@ -1,0 +1,86 @@
+[
+    {
+        "final_emotion": "neutral",
+        "stress_level": 1,
+        "sentiment_score": 0.4,
+        "triggers": [
+            "pleasant",
+            "little moody",
+            "calmness"
+        ],
+        "summary": "The emotional state is one of subdued pleasantness and calmness, marked by a slight introspective mood rather than overt joy or distress.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.018216216216216215,
+            "sad": 0.006810810810810811,
+            "angry": 0.00372972972972973,
+            "surprised": 0.0,
+            "neutral": 0.9669189189189189,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was pleasant and little moody, less laugh and more calmness",
+        "timestamp": "2026-02-27 14:57:16"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.8,
+        "triggers": [
+            "good"
+        ],
+        "summary": "The text conveys a simple, positive emotional state, indicating satisfaction or approval.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6744615384615384,
+            "sad": 0.015846153846153847,
+            "angry": 0.019461538461538464,
+            "surprised": 0.0,
+            "neutral": 0.2836153846153846,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "it was good",
+        "timestamp": "2026-02-27 14:58:06"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [
+            "explicit statement of happiness"
+        ],
+        "summary": "The text directly expresses a clear state of happiness with no apparent stress or negative sentiment.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6110967741935484,
+            "sad": 0.026838709677419356,
+            "angry": 0.024387096774193553,
+            "surprised": 0.0,
+            "neutral": 0.3155483870967742,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i was happy",
+        "timestamp": "2026-02-27 14:58:30"
+    },
+    {
+        "final_emotion": "happy",
+        "stress_level": 0,
+        "sentiment_score": 0.9,
+        "triggers": [],
+        "summary": "The text directly states a past feeling of happiness with no indication of other emotions or stress.",
+        "face_detected": true,
+        "emotion_distribution": {
+            "happy": 0.6050120481927711,
+            "sad": 0.05209638554216868,
+            "angry": 0.04520481927710844,
+            "surprised": 0.0,
+            "neutral": 0.2682409638554217,
+            "fearful": 0.0,
+            "disgusted": 0.0
+        },
+        "user_text": "i was happy",
+        "timestamp": "2026-02-27 14:58:48"
+    }
+]
